@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart and Wishlist</title>
+    <style>
+      .product {
+        margin-bottom: 20px;
+      }
+
+      .button {
+        margin-right: 10px;
+      }
+
+      #cart,
+      #wishlist {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Products -->
+    <div class="product">
+      <h2>Product 1</h2>
+      <p>Price: $100</p>
+      <button class="button" onclick="addToBag('Product 1', 100)">
+        Add to Bag
+      </button>
+      <button class="button" onclick="addToWishlist('Product 1')">
+        Add to Wishlist
+      </button>
+    </div>
+
+    <div class="product">
+      <h2>Product 2</h2>
+      <p>Price: $200</p>
+      <button class="button" onclick="addToBag('Product 2', 200)">
+        Add to Bag
+      </button>
+      <button class="button" onclick="addToWishlist('Product 2')">
+        Add to Wishlist
+      </button>
+    </div>
+
+    <!-- Cart and Wishlist Display -->
+    <div id="cart">
+      <h3>Cart</h3>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="total-amount">0</span></p>
+    </div>
+
+    <div id="wishlist">
+      <h3>Wishlist</h3>
+      <ul id="wishlist-items"></ul>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
